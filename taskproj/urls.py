@@ -6,8 +6,6 @@ from taskapp.views import *
 router = routers.DefaultRouter()
 router.register(r'task', TaskViewSet)
 
-router.register(r'task', TaskViewSet)
-
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),

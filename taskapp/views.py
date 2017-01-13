@@ -10,11 +10,11 @@ class TaskViewSet(viewsets.ModelViewSet):
     '''
     * Model Description: Task is the model for the "tasks" in the party planner app.
     * CRUD on Task model
-    * C - CREATE - POST - allowed for anyone
-    * R - READ - GET (list) - allowed for anyone
-    * R - READ - GET (detail) - allowed for anyone
-    * U - UPDATE - PATCH - allowed for anyone
-    * D - DELETE - DELETE - allowed for anyone
+    * C - CREATE - POST /task/ - allowed for anyone
+    * R - READ - GET /task/ (list) - allowed for anyone
+    * R - READ - GET /task/[id]/ (detail) - allowed for anyone
+    * U - UPDATE - PATCH /task/[id]/ - allowed for anyone
+    * D - DELETE - DELETE /task/[id]/ - allowed for anyone
     '''
     queryset = Task.objects.all()
     permission_classes = (AllowAny,)
