@@ -1,2 +1,2 @@
-# pptbkd
-backend for party planner app
+# shopping app
+backend for shopping app
