@@ -4,7 +4,7 @@ from django.contrib import admin
 from taskapp.views import *
 
 router = routers.DefaultRouter()
-router.register(r'task', TaskViewSet)
+router.register(r'item', ItemViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

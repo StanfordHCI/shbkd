@@ -6,17 +6,17 @@ from rest_framework import viewsets
 from models import *
 from serializers import *
 
-class TaskViewSet(viewsets.ModelViewSet):
+class ItemViewSet(viewsets.ModelViewSet):
     '''
-    * Model Description: Task is the model for the "tasks" in the party planner app.
-    * CRUD on Task model
-    * C - CREATE - POST /task/ - allowed for anyone
-    * R - READ - GET /task/ (list) - allowed for anyone
-    * R - READ - GET /task/[id]/ (detail) - allowed for anyone
-    * U - UPDATE - PATCH /task/[id]/ - allowed for anyone
-    * D - DELETE - DELETE /task/[id]/ - allowed for anyone
+    * Model Description: Item is the model for the items in the shopping app.
+    * CRUD on Item model
+    * C - CREATE - POST /item/ - allowed for anyone
+    * R - READ - GET /item/ (list) - allowed for anyone
+    * R - READ - GET /item/[id]/ (detail) - allowed for anyone
+    * U - UPDATE - PATCH /item/[id]/ - allowed for anyone
+    * D - DELETE - DELETE /item/[id]/ - allowed for anyone
     '''
-    queryset = Task.objects.all()
+    queryset = Item.objects.all()
     permission_classes = (AllowAny,)
     filter_fields = '__all__'
-    serializer_class = TaskSerializer
+    serializer_class = ItemSerializer
